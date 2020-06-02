@@ -172,8 +172,8 @@ QString StorageAbout::vendorString()
     {
         char manufacturerBuffer[PROP_VALUE_MAX];
         char modelBuffer[PROP_VALUE_MAX];
-        property_get("ro.product.manufacturer", manufacturerBuffer, "");
-        property_get("ro.product.model", modelBuffer, "");
+        property_get("ro.product.vendor.manufacturer", manufacturerBuffer, "");
+        property_get("ro.product.vendor.model", modelBuffer, "");
         m_vendorString = QString("%1 %2").arg(manufacturerBuffer).arg(modelBuffer);
     }
 
